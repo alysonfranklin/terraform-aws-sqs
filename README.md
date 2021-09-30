@@ -6,7 +6,7 @@ Módulo Terraform que cria recursos SQS na AWS.
 
 ```hcl
 module "sqs_queue" {
-  source  = "terraform-aws-modules/sqs/aws"
+  source  = "git::https://github.com/alysonfranklin/terraform-aws-sqs.git?ref=tags/3.1.0"
   version = "~> 2.0"
 
   name = "user"
@@ -38,31 +38,31 @@ module "sqs_queue" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Requirements
+## Requisitos
 
 | Nome | Versão |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12.7 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 2.30 |
 
-## Providers
+## Provedores
 
 | Nome | Versão |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 2.30 |
 
-## Modules
+## Módulos
 
 Sem módulos.
 
-## Resources
+## Recursos
 
 | Nome | Tipo |
 |------|------|
 | [aws_sqs_queue.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sqs_queue) | resource |
 | [aws_arn.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/arn) | data source |
 
-## Inputs
+## Inputs/Entradas
 
 | Nome | Descrição | Tipo | Padrão | Obrigatório |
 |------|-------------|------|---------|:--------:|
@@ -82,7 +82,7 @@ Sem módulos.
 | <a name="input_tags"></a> [tags](#input\_tags) | Um mapeamento de tags para atribuir a todos os recursos | `map(string)` | `{}` | no |
 | <a name="input_visibility_timeout_seconds"></a> [visibility\_timeout\_seconds](#input\_visibility\_timeout\_seconds) | O tempo limite de visibilidade para a fila. Um número inteiro de 0 a 43200 (12 horas) | `number` | `30` | no |
 
-## Outputs
+## Outputs/Saídas
 
 | Nome | Descrição |
 |------|-------------|
